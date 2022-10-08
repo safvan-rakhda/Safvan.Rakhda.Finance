@@ -1,7 +1,8 @@
 {
+  "homepage": "https://safvan-rakhda.github.io/Safvan.Rakhda.Finance",
   "name": "safvan.rakhda.finance.ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bootstrap": "^5.1.3",
     "http-proxy-middleware": "^2.0.6",
@@ -27,7 +28,8 @@
     "workbox-range-requests": "^6.5.3",
     "workbox-routing": "^6.5.3",
     "workbox-strategies": "^6.5.3",
-    "workbox-streams": "^6.5.3"
+    "workbox-streams": "^6.5.3",
+    "gh-pages": "^4.0.0"
   },
   "devDependencies": {
     "ajv": "^8.11.0",
@@ -39,7 +41,8 @@
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-react": "^7.30.1",
     "nan": "^2.16.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "gh-pages": "^4.0.0"
   },
   "overrides": {
     "autoprefixer": "10.4.5"
@@ -51,6 +54,7 @@
   "scripts": {
     "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "rimraf ./build && react-scripts start",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
